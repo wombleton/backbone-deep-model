@@ -4,8 +4,25 @@
   "author": {
     "name": "Charles Davison"
   },
-  "version": "0.10.1",
+  "categories": ["UI"],
+  "version": "0.10.1-jam.1",
   "dependencies": {
     "backbone": ">=0.9.10"
-  }
+  },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/powmedia/backbone-deep-model.git"
+    },
+    "jam": {
+        "main": "distribution/deep-model.js",
+        "include": [
+            "distribution/deep-model.js",
+            "LICENSE",
+            "README.md"
+        ],
+        "dependencies": {
+            "underscore": null,
+            "backbone": null
+        }
+    }
 }
