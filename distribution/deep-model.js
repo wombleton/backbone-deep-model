@@ -1,7 +1,7 @@
 /*jshint expr:true eqnull:true */
 /**
  *
- * Backbone.DeepModel v0.10.1
+ * Backbone.DeepModel v0.10.4
  *
  * Copyright (c) 2013 Charles Davison, Pow Media Ltd
  *
@@ -11,6 +11,8 @@
 
 /**
  * Underscore mixins for deep objects
+ *
+ * Based on https://gist.github.com/echong/3861963
  */
 (function() {
   var arrays, basicObjects, deepClone, deepExtend, deepExtendCouple, isBasicObject,
@@ -18,7 +20,10 @@
 
   deepClone = function(obj) {
     var func, isArr;
-    if (!_.isObject(obj || _.isFunction(obj))) {
+    if (!_.isObject(obj) || _.isFunction(obj)) {
+      return obj;
+    }
+    if (obj instanceof Backbone.Collection || obj instanceof Backbone.Model) {
       return obj;
     }
     if (_.isDate(obj)) {
@@ -413,7 +418,7 @@
           //<custom code>
           return _.deepClone(this._previousAttributes);
           //</custom code>
-        },
+        }
     });
 
 
@@ -430,3 +435,4 @@
     return Backbone;
 
 }));
+

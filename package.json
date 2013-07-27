@@ -5,7 +5,7 @@
     "name": "Charles Davison"
   },
   "categories": ["UI"],
-  "version": "0.10.1-jam.1",
+  "version": "0.10.4-jam.1",
   "dependencies": {
     "backbone": ">=0.9.10"
   },
@@ -25,4 +25,8 @@
             "backbone": null
         }
     }
+  },
+  "devDependencies": {
+    "buildify": "latest"
+  }
 }
