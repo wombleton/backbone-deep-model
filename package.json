@@ -24,8 +24,7 @@
             "underscore": null,
             "backbone": null
         }
-    }
-  },
+    },
   "devDependencies": {
     "buildify": "latest"
   }
